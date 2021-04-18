@@ -1,0 +1,36 @@
+{
+    "name": "moonbaselabs/blade-components",
+    "description": "A set of themeable components built with Tailwind CSS and AlpineJS for use with Laravel Blade.",
+    "keywords": ["Laravel", "Blade", "UI", "Tailwind", "AlpineJS"],
+    "homepage": "https://github.com/moonbaselabs/blade-components",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Taylor",
+            "homepage": "https://imacrayon.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-json": "*",
+        "illuminate/support": "^7.0|^8.0",
+        "illuminate/view": "^7.0|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MoonbaseLabs\\BladeComponents\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MoonbaseLabs\\BladeComponents\\BladeComponentsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
