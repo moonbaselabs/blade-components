@@ -65,7 +65,7 @@ Output:
 Renders a form button:
 
 ```html
-<x-button>Badge</x-button>
+<x-button>Button</x-button>
 ```
 Output:
 
