@@ -39,7 +39,7 @@ class Select extends Control
             $invalidAttributes['aria-describedby'] = new AppendableAttributeValue($this->name.'_error');
         }
 
-        $multipleClasses = ' bg-gray-50 border overflow-x-hidden divide-y overflow-y-scroll h-40';
+        $multipleClasses = ' '.$this->theme('multiple');
 
         return $this->attributes->merge([
             'class' => $this->theme($this->disabled ? 'disabled' : ($this->invalid ? 'invalid' : 'normal')).$multipleClasses,
