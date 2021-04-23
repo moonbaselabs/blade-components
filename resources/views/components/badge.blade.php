@@ -1,3 +1,3 @@
-<span {{ $attributes->merge($theme('normal')) }}>
+<span {{ $attributes->merge(['class' => $theme()]) }}>
   {{ $slot }}
 </span>
