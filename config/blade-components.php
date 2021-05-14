@@ -47,7 +47,7 @@ return [
         ],
 
         'menu' => [
-            'class' => Components\Dropdown::class,
+            'class' => Components\Menu::class,
         ],
 
         'menu-item' => [
