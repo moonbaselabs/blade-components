@@ -46,6 +46,14 @@ Your're all set! You may customize your component themes in `config/blade-compon
 *   [Error](#error)
 *   [Field](#field)
 *   [Form](#form)
+*   [Input](#input)
+*   [Label](#label)
+*   [Legend](#legend)
+*   [Menu](#menu)
+*   [Menu Item](#menu-item)
+*   [Radio](#radio)
+*   [Select](#select)
+*   [Textarea](#textarea)
 
 ### Badge
 
@@ -205,3 +213,35 @@ Output:
     ...
 </x-form>
 ```
+
+### Input
+
+_Documentation coming soon._
+
+### Label
+
+_Documentation coming soon._
+
+### Legend
+
+_Documentation coming soon._
+
+### Menu
+
+_Documentation coming soon._
+
+### Menu Item
+
+_Documentation coming soon._
+
+### Radio
+
+_Documentation coming soon._
+
+### Select
+
+_Documentation coming soon._
+
+### Textarea
+
+_Documentation coming soon._
