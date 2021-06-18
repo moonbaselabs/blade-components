@@ -81,10 +81,10 @@ Output:
 <button class="...">Button</x-button>
 ```
 
-When the `href` attribute is set this component will render a link:
+When the `href` attribute is set this component will render as a link:
 
 ```html
-<button href="https://moonbaselabs.com">More Info</button>
+<x-button href="https://moonbaselabs.com">More Info</x-button>
 ```
 Output:
 
