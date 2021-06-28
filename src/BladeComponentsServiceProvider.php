@@ -35,15 +35,20 @@ class BladeComponentsServiceProvider extends ServiceProvider
 
     private function bootPublishing()
     {
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/../config/blade-components.php' => $this->app->configPath('blade-components.php'),
-                __DIR__.'/../resources/js' => $this->app->resourcePath('js/vendor/blade-components'),
-            ], 'blade-components');
-
-            $this->publishes([
-                __DIR__.'/../resources/views' => $this->app->resourcePath('views/vendor/blade-components'),
-            ], 'blade-components-views');
+        if (! $this->app->runningInConsole()) {
+            return;
         }
+
+        $this->publishes([
+            __DIR__.'/../config/blade-components.php' => $this->app->configPath('blade-components.php'),
+        ], 'blade-components');
+
+        $this->publishes([
+            __DIR__.'/../resources/views' => $this->app->resourcePath('views/vendor/blade-components'),
+        ], 'blade-components-views');
+
+        $this->commands([
+            Console\InstallCommand::class,
+        ]);
     }
 }

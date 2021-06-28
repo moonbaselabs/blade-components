@@ -10,6 +10,17 @@ This project is still in Beta some APIs might change.
 composer require moonbaselabs/blade-components
 ```
 
+## Setup Through Artisan
+
+**This command will overwrite asset files.** It's best to run this in a fresh Laravel project after optionally installing Laravel Breeze. If you are installing this package in an existing project use the Manual Setup steps below.
+
+```bash
+php artisan blade-components:install
+```
+
+
+## Setup Manually
+
 Publish the components configuration file:
 
 ```bash
@@ -31,8 +42,12 @@ Include the AlpineJS components in your JavaScript before loading AplineJS
 ```js
 // resources/js/app.js
 
-import './vendor/blade-components'
-import 'alpinejs'
+import './blade-components'
+import Alpine from 'alpinejs'
+
+window.Alpine = Alpine
+
+Alpine.start()
 ```
 
 Your're all set! You may customize your component themes in `config/blade-components.php`.

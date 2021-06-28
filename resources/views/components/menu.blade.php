@@ -1,4 +1,4 @@
-<div x-data="Components.menu()" x-init="init()" x-on:keydown.escape.stop="open = false; focusButton()" x-on:click.away="onClickAway($event)" {{ $attributes->class('relative inline-block text-left') }}>
+<div x-data="Components.menu()" x-on:keydown.escape.stop="open = false; focusButton()" x-on:click.away="onClickAway($event)" {{ $attributes->class('relative inline-block text-left') }}>
     <div>
         {!! Str::replaceFirst(' ', ' id="'.$id.'_button" x-ref="button" x-on:click="onButtonClick()" x-on:keyup.space.prevent="onButtonEnter()" x-on:keydown.enter.prevent="onButtonEnter()" aria-haspopup="true" x-bind:aria-expanded="open.toString()" x-on:keydown.arrow-up.prevent="onArrowUp()" x-on:keydown.arrow-down.prevent="onArrowDown()"', (string) $slot) !!}
     </div>
