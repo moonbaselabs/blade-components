@@ -1,1 +1,1 @@
-<input type="checkbox" {{ $controlAttributes() }} {{ $checked ? 'checked' : '' }}>
+<input type="checkbox" {{ $controlAttributes() }}  value="{{ $value }}" {{ $checked ? 'checked' : '' }}>
