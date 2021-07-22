@@ -2,9 +2,7 @@
 
 namespace MoonbaseLabs\BladeComponents\Components;
 
-use Illuminate\Support\Collection;
 use Illuminate\View\AppendableAttributeValue;
-use InvalidArgumentException;
 
 class Select extends Control
 {
@@ -12,19 +10,12 @@ class Select extends Control
     public $multiple;
     public $placeholder;
 
-    public function __construct($name, $id = null, $value = '', $bag = 'default', $disabled = false, $theme = 'default', $options = [], $multiple = false, $placeholder = '', $keyBy = 'id', $property = 'name')
+    public function __construct($name, $id = null, $value = '', $bag = 'default', $disabled = false, $theme = 'default', $options = [], $multiple = false, $placeholder = '')
     {
         parent::__construct($name, $id, $value, $bag, $disabled, $theme);
         $this->placeholder = $placeholder;
         $this->multiple = $multiple;
-
-        if ($options instanceof Collection) {
-            $this->options = $options->mapWithKeys(fn ($option) => [$option->{$keyBy} => $option->{$property}]);
-        } elseif (is_array($options)) {
-            $this->options = $options;
-        } else {
-            throw new InvalidArgumentException('Invalid options');
-        }
+        $this->options = $options;
     }
 
     public function controlAttributes()
