@@ -1,1 +1,1 @@
-<input type="radio" {{ $controlAttributes() }} {{ $checked ? 'checked' : '' }}>
+<input type="radio" {{ $controlAttributes() }} value="{{ $value }}" {{ $checked ? 'checked' : '' }}>
