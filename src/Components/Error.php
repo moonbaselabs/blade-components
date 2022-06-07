@@ -10,12 +10,14 @@ class Error extends Component
 {
     use Themeable;
 
+    public $id;
     public $for;
     public $value;
     public $bag;
 
     public function __construct($for, $value = null, $bag = 'default', $theme = 'default')
     {
+        $this->id = $for;
         $this->for = trim(str_replace(['[', ']'], ['.', ''], $for), '.');
         $this->value = $value;
         $this->bag = $bag;
