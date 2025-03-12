@@ -1,5 +1,8 @@
 # Blade Components
 
+> [!WARNING]  
+> This project is no longer maintained. Use [imacrayon/blade-starter-kit](https://github.com/imacrayon/blade-starter-kit) instead.
+
 A set of themeable components built with Tailwind CSS and AlpineJS for use with Laravel Blade.
 
 This project is still in Beta some APIs might change.
